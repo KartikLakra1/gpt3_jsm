@@ -3,8 +3,7 @@ import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import logo from "../../assets/logo.svg";
 import "./navbar.css";
 
-const Menu = () => {
-  return (
+const Menu = () =>  (
     <>
       <p>
         <a href="#home">Home</a>
@@ -23,7 +22,6 @@ const Menu = () => {
       </p>
     </>
   );
-};
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -48,17 +46,16 @@ const Navbar = () => {
           <RiCloseLine
             color="#fff"
             size={27}
-            onClick={() => {
-              setToggleMenu(false);
-            }}
+            onClick={() => 
+              setToggleMenu(false)
+            }
           />
         ) : (
           <RiMenu3Line
             color="#fff"
             size={27}
-            onClick={() => {
-              setToggleMenu(true);
-            }}
+            onClick={() => 
+              setToggleMenu(true)}
           />
         )}
         {toggleMenu && (
